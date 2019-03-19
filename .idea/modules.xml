@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/apigateway/ApiGateway.iml" filepath="$PROJECT_DIR$/apigateway/ApiGateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/apigateway/apigateway.iml" filepath="$PROJECT_DIR$/apigateway/apigateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/configserver/configserver.iml" filepath="$PROJECT_DIR$/configserver/configserver.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eureka/eureka.iml" filepath="$PROJECT_DIR$/eureka/eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ibm.iml" filepath="$PROJECT_DIR$/ibm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/movie-app/movie-app.iml" filepath="$PROJECT_DIR$/movie-app/movie-app.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,53 @@
+version: '2'
+services:
+  mongo:
+    image: mongo:3.4-jessie
+#    ports:
+#      - 27017:27017
+    expose:
+      - 27017
+    container_name: mongo
+    network_mode: host
+
+
+  eureka:
+    build: eureka/
+    restart: always
+    network_mode: "host"
+    image: eureka-server
+    hostname: localhost
+    ports:
+      - 8761:8761
+
+  config:
+    build: configserver/
+    restart: always
+    network_mode: "host"
+    image: config-server
+    hostname: localhost
+    ports:
+      - 1111:1111
+
+  apigateway:
+    build: apigateway/
+    restart: always
+    network_mode: "host"
+    image: zuul-server
+    hostname: localhost
+    ports:
+      - 5000:5000
+
+  movie-app:
+    build: movie-app/
+    image: movie-app
+    restart: always
+    network_mode: "host"
+    hostname: localhost
+    ports:
+      - 3333:3333
+    depends_on:
+      - config
+      - eureka
+      - apigateway
+      - mongo
+
